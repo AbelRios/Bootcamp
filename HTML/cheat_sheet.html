@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Metadatos / Metadata-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="robots" content="noindex"> <!--para que google no te indexe-->
+    <meta name="robots" content="index"> <!--Comportamiento por defecto-->
+
+    <meta name="robots" content="follow">
+    <meta name="robots" content="unfollow"> <!--Comportamiento por defecto-->
+
+    <meta name="description"    content="Academia de programación web"> <!--Aquí podemos escribir la descripción de la pagina que salga en google (SEO)-->
+    <meta name="author" content="Releevant"> <!-- para que salga el autor de la pagina-->
+
+    <!--Controlar el cache de este documento-->
+    <meta   http-equiv="cache-control"  content="no-cache">
+
+    <!--Redirecciones (LOL)-->
+   <!-- <meta   http-equiv="refresh"    content="5; url=https://google.com"> --> <!-- content= tiempo en segundos; URL a donde quieres redirigir-->
+
+
+   <!--Para meter estilos de CSS-->
+   <style>
+       .container{
+           color:red    
+       }
+   </style>
+
+
+
+
+
+
+
+
+
+    <title>Cheat Sheet</title>
+</head>
+
+<body>
+    <!-- Hola esto es un comentario de ejemplo -->
+
+    <!-- Enlaces internos y externos -->
+    <a href="https://www.google.com">Ir a Google</a>
+    <a href="index.html" target="_blank">Inicio</a>
+
+    <!-- Linea en blanco-->
+    <br>
+
+    <!--Linea separadora-->
+    <hr>
+
+    <!--Titulos / Headings-->
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+
+    <hr>
+
+    <!--Textos / parrafos / paragraphs-->
+    <p><b>Parrafo</b></p>
+    <p>
+        <!--Poner en negrita--><b>Lorem fistrum ahorarr</b> caballo blanco caballo negroorl papaar papaar la caidita
+        diodeno apetecan mamaar ese pedazo
+        de ese pedazo de qué dise usteer. Tiene musho peligro amatomaa te va a hasé pupitaa amatomaa no puedor la
+        caidita pecador. Por la gloria de mi madre llevame al sircoo ese hombree va usté muy cargadoo condemor diodenoo
+        está la cosa muy malar de la pradera sexuarl ese que llega está la cosa muy malar. Caballo blanco caballo
+        negroorl
+        <!--Distinto tipo de negrita--><strong>te va a hasé pupitaa te va a hasé pupitaa ahorarr.</strong> Se calle
+        ustée te va a hasé pupitaa diodeno pupita
+        papaar papaar ese que llega se calle ustée. Hasta luego Lucas de la pradera mamaar va usté muy cargadoo pupita.
+        Te va a hasé pupitaa hasta luego Lucas no puedor por la gloria de mi madre sexuarl fistro quietooor va usté muy
+        cargadoo.
+        <!--Cursiva--><em>No puedor hasta luego Lucas hasta luego</em>
+        <!--Texto tachado--> <s>Lucas mamaar qué dise usteer pupita</s> diodenoo caballo blanco
+        caballo negroorl. Tiene musho peligro a peich fistro me cago en tus muelas.
+    </p>
+
+    <pre> <!--Parrafo con el mismo estilo/formato que el de aqui-->
+        Lorem fistrum ahorarr caballo blanco caballo negroorl papaar papaar la caidita diodeno 
+        apetecan mamaar ese pedazo de ese 
+        pedazo de qué dise usteer. Tiene musho peligro amatomaa te va
+        a hasé pupitaa amatomaa 
+        no puedor
+        la caidita pecador.
+        Por la gloria de mi madre llevame al sircoo ese hombree va usté muy cargadoo condemor diodenoo está la cosa
+        muy malar de la pradera sexuarl ese que llega está la cosa muy malar. Caballo blanco caballo negroorl te va a hasé 
+        pupitaa te va a 
+        hasé pupitaa ahorarr. Se calle ustée te va a hasé pupitaa diodeno pupita papaar papaar ese que llega se calle ustée. 
+        Hasta luego 
+        Lucas 
+        de la pradera mamaar va usté muy cargadoo pupita. 
+    </pre>
+    <p>
+        <!--Poner subindices-->
+        La molecula preferida de casi cualquier desarrollador es:
+        C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub> toma subindices guapos shurmano
+    </p>
+    <p>
+        <!--Poner superindices-->
+        Teorema de pitagoras
+    </p>
+    <p>
+        <var>a</var><sup>2</sup>+<var>b</var><sup>2</sup>=<var>c</var><sup>2</sup> Toma formula tocha
+    </p>
+    <br>
+    <hr><br>
+
+    <!--Contenedores-->
+
+    <div>
+        <!--Contenedor estandar-->
+        <p>Contenedor DIV</p>
+    </div>
+    <nav>
+        <!--Contenedor pequeno-->
+        <a href="">Enlace_</a><a href="">Enlace_</a><a href="">Enlace_</a>
+    </nav>
+
+    <section>
+        <!--Secciones (como en elementor)-->
+        <article>
+            <h1>H1</h1>
+            <p>Parrafo de cosas blablablablblablablablalba</p>
+        </article>
+    </section>
+
+    <aside>
+        <!--Seccion lateral / menu lateral-->
+        <p>Menu generalmente lateral</p>
+    </aside>
+
+    <footer>
+        <p>Pie de pagina</p>
+        <address>Malaga, C/Perry Mason 27</address>
+    </footer>
+    <br>
+    <hr>
+    <br>
+
+    <!--Listas / lists-->
+
+    <ul>Lista Desordenada
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4
+            <ul>
+                <li>Item 4.1
+                    <ul>
+                        <li>Item 4.1.1</li>
+                        <li>Item 4.1.2</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <ol start="200">
+        <li>Cosas I</li>
+        <li>Cosas II</li>
+        <li>Cosas III</li>
+    </ol>
+
+    <br>
+    <hr><br>
+
+    <!--Tablas / Tables-->
+    <table>
+        <thead>
+            <!--Table Headers-->
+            <tr> <!--Table Row-->
+                <th>Nombre</th><!--Table Head-->
+                <th>email</th>
+                <th>Edad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!--Table Row-->
+                <td>John Smith</td>
+                <!--Table data (si hay tres columnas tiene que haber tres td, si no puede generar errores)-->
+                <td>johnsmith@tucasa.com</td>
+                <td>876</td>
+            </tr>
+            <tr>
+                <td>Marie Curie</td>
+                <td>maricuri@ciencia.org</td>
+                <td>30</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <hr><br>
+
+    <!-- Formularios / Forms e Inputs  (toda la info que quieras recoger de un usuario a traves de inputs) -->
+    <form action="https://www.google.com/" method="get">
+        <!--le mandamos los datos a google porque no tenemos backend aun-->
+        <div>
+            <label for="nameInput">Nombre:</label>
+            <input required type="text" id="nameInput" name="userName" placeholder="Introduzca su nombre">
+        </div><br>
+        <div>
+            <label for="lastnameInput">Apellidos:</label>
+            <input type="text" id="lastnameInput" name="userLastName" placeholder="Introduzca sus apellidos">
+        </div>
+        <br>
+        <div>
+            <label for="emailInput">Email:</label>
+            <input type="email" id="emailInput" name="userEmail" placeholder="Introduzca su email">
+        </div><br>
+        <div>
+            <label for="passwordInput">Password:</label>
+            <input type="password" id="passwordInput" name="userPassword" placeholder="Introduzca contraseña">
+        </div><br>
+        <div>
+            <!--Mensajes (recibir)-->
+            <label for="messageInput">Mensaje:</label><br>
+            <textarea name="messageInput" id="messageInput" cols="30" rows="10"></textarea>
+            <br>
+        </div>
+
+        <div>
+            <!--Desplegables-->
+            <label for="genderInput">Genero</label>
+            <select name="genderInput" id="genderInput">
+                <option value="" hidden></option>
+                <option value="male">Hombre</option>
+                <option value="female">Mujer</option>
+                <option value="nonbinary">No Binario</option>
+                <option value="pokemon">Pikachu</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="age">Edad:</label>
+        </div>
+        <input type="number" name="age" id="ageInput" min="0" max="150">
+        <br>
+        <div>
+            <label for="birthday">Fecha de nacimiento:</label>
+        </div>
+        <input type="date" name="birthdayInput">
+        <br>
+        <div>
+            <legend>Genero:</legend>
+
+            <div>
+                <input type="radio" name="genero" value="female" id="female">
+                <label for="female">Femenino</label>
+            </div>
+
+            <div>
+                <input type="radio" name="genero" value="male" id="male">
+                <label for="male">Masculino</label>
+            </div>
+
+            <div>
+                <input type="radio" name="genero" value="other">
+                <label for="other">Otro</label>
+            </div>
+        </div>
+        <br>
+        <div>
+            <label for="avatar">Selecciona una foto de perfil</label><br>
+            <input type="file" id="avatar" name="avatarInput" accept="image/png, image/jpeg">
+            <!-- Con el "accept" restringimos los tipos de archivos que aceptamos en el input-->
+        </div>
+        <br>
+        <div>
+            <label for="feedback">¿Como de satisfecho estas con esta web?</label>
+            <input type="range" min="0" max="100" step="10">
+            <!--input que tiene forma de la barra horizontal como "rango"-->
+        </div>
+        <br>
+        <div>
+            <label for="">
+                <input type="checkbox" id="checkbox" value="firstCheckbox">
+                Este es mi primer checkbox
+            </label>
+        </div>
+        <br>
+        <div>
+            <input type="time" min="09:00" max="18:00">
+            <br>
+            <input type="week">
+        </div>
+        <br>
+
+        <!--Otro tipo de lista-->
+        <div>
+            <label for="carBrand">Marcas de Coches</label>
+            <input type="text" id="carBrandInput" name="carBrand" list="carBrandList">
+            <datalist id="carBrandList">
+                <option value="BMW"></option>
+                <option value="Ford"></option>
+                <option value="Volkswagen"></option>
+                <option value="Mercedes"></option>
+                <option value="Era un domingo en la noche en los coches de choque"></option>
+            </datalist>
+        </div>
+        <br>
+
+        <!--Hacer un cuadradito para "remarcar"-->
+        <fieldset id="personalInfo" disabled>
+            <legend>Información Personal</legend>
+            <div>
+                <label for="nameInput">Nombre:</label>
+                <input required type="text" id="nameInput" name="userName" placeholder="Introduzca su nombre">
+            </div><br>
+            <div>
+                <label for="lastnameInput">Apellidos:</label>
+                <input type="text" id="lastnameInput" name="userLastName" placeholder="Introduzca sus apellidos">
+            </div>
+        </fieldset>
+        <br>
+
+        <!--barra medidora-->
+        <label for="fuelLevel">Nivel de Gasolina</label>
+        <meter min="0" max="100" value="78" id="fuelLevel"> </meter>
+        <br>
+        <label for="progress">Progreso</label>
+        <progress max="100" value="76"></progress>
+        <!--otro tipo de barra medidora / de progreso-->
+        <br>
+
+
+
+
+        <br>
+        <input type="submit" value="Enviar">
+        <!--para enviar los datos recogidos al "action" del form-->
+        <br>
+        <br>
+    </form>
+    <!--fin de formularios-->
+    <br>
+    <hr>
+    <br>
+    
+    
+    <!-- Multimedia / Media-->
+    
+    
+    
+    <!--    Imagenes-->
+    <br>
+    <img src="../HTML/ejercicios_0_1_2/gandalf.jpg" alt="" width="300" height="300">
+    <br>
+    <img src="https://cdn.vox-cdn.com/thumbor/LXvoCd3sbTvxMUpVAd-f4ArjYRA=/0x0:1920x800/1820x1024/filters:focal(694x265:1000x571):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/69582511/lotr1_movie_screencaps.com_12025.0.jpg" alt="" width="300">
+    <br>
+    </body>
+
+    <!-- para meter javascript en dentro del HTML (no se utiliza, si fuese necesario se ubica al final justo antes del cierre del body)-->
+
+    <script  src="../JS/cheatsheet.js">
+       // document.write("Hola desde Javascript")
+    </script>
+
+</html>

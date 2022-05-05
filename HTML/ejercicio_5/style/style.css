@@ -1,0 +1,6 @@
+a:link {
+    background-color: yellow ; /* Este ejemplo está enlazado con el ejercicio5.html en el header */
+}
+a:hover{
+    background-color: green;
+}

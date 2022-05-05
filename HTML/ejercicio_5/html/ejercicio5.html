@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio Ej 5</title>
+    <link rel="stylesheet" type="text/css" href="../style/style.css"> <!--Enlazando la hoja de estilo que hemos creado de ejemplo en CSS-->
+</head>
+<body>
+    <a href="../html/ejercicio5.html"><img src="../images/logo.png" alt="logo de la compañía"    width="250"></a>
+    <br>
+    <nav>
+        <a href="../html/ejercicio5.html" style="border: 3px solid #000 ;">Inicio</a> <!-- Estilo (CSS) en la misma línea -->
+        <a href="../html/newaccount.html">Crear Cuenta</a>
+        <a href="../html/recover_password/recoverpassword.html">Recuperar Contraseña</a>
+    </nav>
+    <h1>Bienvenido a Black Yard</h1>
+    <div>
+        <form action="">
+            <legend>¿Tienes ya una cuenta? Inicia sesión aquí:</legend>
+            <br>
+            <label for="emailInput">Email: </label>
+            <br>
+            <input required type="email" id="emailInput" name="userEmail" placeholder="ejemplo@email.com">
+            <br>
+            <br>
+            <label for="passwordInput">Contraseña:</label>
+            <br>
+            <input required type="password" id="passwordInput"   name="userPassword" placeholder="*******">
+            <br>
+            <br>
+            <input type="submit" value="Iniciar Sesión">
+        </form>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <p>¿Has perdido tu contraseña? Haz click <a href="../html/recover_password/recoverpassword.html" target="_blank">aquí.</a></p>
+    <p>¿Aún no tienes tu cuenta de Black Yard? Crea tu cuenta <a href="../html/newaccount.html" target="_blank">aquí.</a></p>
+
+    
+</body>
+</html>

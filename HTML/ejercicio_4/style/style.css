@@ -1,0 +1,47 @@
+/*
+etiqueta{
+    estilo de la etiqueta. todas las etiquetas tendrán el mismo estilo.
+}
+
+.clase{
+    estilo de la clase. todo lo que tenga asignado esta clase tendrá el mismo estilo.
+}
+
+#id{
+    lo que tenga esta ID tendrá este estilo 
+    NO ES BUENA PRACTICA que distintas cosas tengan la misma ID. si vas a usar un mismo estilo para varias cosas
+    mejor usar una clase y asignar esa clase.
+}
+
+A continuación he dejado estos atributos en comentario para que no jodan con la jerarquía y la clase 'enlace' funcione bien
+
+a:link{          
+    color: red;
+    background-color: blue;
+}
+
+a:hover{
+    color: white;
+    background-color: red;
+}
+
+a:visited{
+    color: yellow;
+    background-color: green; 
+}
+
+a:visited:hover{
+    color: green;
+    background-color: yellow;
+}
+*/
+
+
+.enlace{    /* Creando una Clase*/
+    color: green;
+}
+
+#parrafo{   /* Creando un estilo para ID*/
+    font-size:x-large ;
+}
+

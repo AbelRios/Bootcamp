@@ -1,0 +1,41 @@
+#tealRow{
+    color: teal ;
+}
+#redRow{
+    color: red;
+}
+#blueRow{
+    color: blue;
+}
+#orangeRow{
+    color: orange;
+}
+#purpleRow{
+    color: purple;
+}
+#oliveRow{
+    color: olive;
+}
+#fuchsiaRow{
+    color: fuchsia;
+}
+#greenRow{
+    color: green;
+}
+
+/*  Primera Columna */
+td:first-child{
+    background-color: white;
+}
+/* Segunda Columna */
+td:nth-child(2){
+    background-color: red;
+}
+/* Tercera Columna */
+td:nth-child(3){
+    background-color: green;
+}
+/* Cuarta Columna */
+td:last-child{
+    background-color: blue;
+}

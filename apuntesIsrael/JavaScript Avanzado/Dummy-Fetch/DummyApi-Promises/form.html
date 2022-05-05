@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header> 
+        <h1> Create User</h1>
+      </header>
+          <div class="topnav">
+              <a href="index.html">Main Page</a>
+              <a class="active" href="form.html">Sign Up</a>
+             <!--  <a href="updateuser.html">Update User</a> -->
+          </div>
+    <form>
+        <div class="imgcontainer">
+            <img src="https://freepikpsd.com/file/2019/10/user-login-png-transparent-6-Transparent-Images.png" 
+                 alt="Avatar" 
+                 class="avatar">
+          </div>
+          <label for="title"> <b> Choose a title </b> </label>
+          <select name="title" id="title" >
+              <option selected> Choose a title </option>
+              <option value="mr"> MR. </option>
+              <option value="miss"> MISS. </option>
+              <option value="other"> Other </option>
+          </select> <br><br>
+
+        <label for="name"><b>Name</b></label>
+        <input type="text" id="name" placeholder="Enter name" name="name"> <br><br>
+
+        <label for="surname"><b>Surname</b></label>
+        <input type="text" id="surname" placeholder="Enter surname" name="surname"> <br><br>
+
+        <label for="genero"> <b> Choose a gender </b> </label>
+        <select name="genero" id="gender" >
+            <option selected> Choose a gender </option>
+            <option value="male"> Male </option>
+            <option value="female"> Female </option>
+            <option value="other"> Other </option>
+        </select>
+
+        <label for="email"><b>Email</b></label>
+        <input type="email" id="email" placeholder="Enter email" name="email"> <br><br>
+
+        <label for="dateOfBirth"><b>Date of Birth</b></label>
+        <input type="text" id="dateOfBirth" placeholder="Enter date of birth" name="dateOfBirth"> <br><br>
+
+        <label for="phone"><b>Telephone</b></label>
+        <input type="text" id="phone" placeholder="Enter phone number" name="phone"> <br><br>
+
+        <label for="picture"><b> Image </b></label>
+        <input type="text" id="picture" placeholder="Enter the url of your picture" name="picture"> <br><br>
+
+        <label for="street"><b> Street </b></label>
+        <input type="text" id="location" placeholder="Enter Street" name="street"> <br><br>
+
+        <label for="city"><b> City </b></label>
+        <input type="text" id="city" placeholder="Enter City" name="city"> <br><br>
+
+        <label for="state"><b>State</b></label>
+        <input type="text" id="state" placeholder="Enter State" name="state"> <br><br>
+
+        <label for="country"><b>Country</b></label>
+        <input type="text" id="country" placeholder="Enter country" name="country"> <br><br>
+    </form>
+    <p id="errore"></p>
+    <p id="success"></p>
+    <button type="submit" id="boton" onClick="sendInfo()"> Create User </button>
+</body>
+<script src="api.js"></script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./CSS/styleformulario.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  <header> 
+    <h1>My eCommerce</h1>
+  </header>
+    <div class="topnav">
+        <a href="formulario.html">Sign Up</a>
+        <a href="newproduct.html">New product</a>
+        <a href="comprar.html">Buy product</a>
+        <a class="active" href="stock.html">Add Stock</a>
+        <a class="derecha" href="login.html">Login</a>
+    </div>
+    <form action="action_page.php" method="post">
+        <div class="imgcontainer">
+            <img src="https://freepikpsd.com/file/2019/10/user-login-png-transparent-6-Transparent-Images.png" 
+            alt="Avatar" 
+            class="avatar">
+        </div>
+      
+        <div class="container">
+            <label for="id"><b>Product id</b></label>
+            <input type="number" id="id" placeholder="Enter product id" name="id_producto">
+      
+            <label for="stock"><b>Quantity on stock</b></label>
+            <input type="number" id="stock" placeholder="Enter quantity of stock" name="stock">
+      
+        </div>
+      </form>
+      <p id="errore"> </p>
+      <p id="success"> </p>
+      <button onClick = "addStock()" type="submit">Add Stock</button>
+      <script src="JS/form.js"></script>
+</body>
+</html>

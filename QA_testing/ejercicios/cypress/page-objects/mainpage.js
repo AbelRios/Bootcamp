@@ -9,4 +9,8 @@ export class MainPage{
     clickFormAuthentication(){
         cy.contains('Form Authentication').click()
     }
+
+    clickShiftingContent(){
+        cy.contains('Shifting Content').click()
+    }
 }

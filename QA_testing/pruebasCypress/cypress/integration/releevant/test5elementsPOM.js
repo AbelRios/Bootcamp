@@ -19,8 +19,8 @@ describe ('test de 5 elementos', () => {
     it('check there is 5 li elements', () => {
 
         shiftingcontenpage.clickExample1();
-        menupage.check5elements();
-        
+        menupage.checkNumberElements(5);
+
     })
 
 })

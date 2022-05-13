@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "6a6a8891-7ad8-4b6c-bc41-31d17bb208ce",
+		"name": "ejerciciosNode",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "crearNota",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 4,\r\n    \"autor\": \"Don Pepito\",\r\n    \"texto\": \"¿Paso usted ya por casa?\",\r\n    \"receptor\": \"Don Jose\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/crearnota",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"crearnota"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "borrarNotaQuery",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/borrarnotaquery?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"borrarnotaquery"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "borrarNotaParams",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/borrarnotaparams/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"borrarnotaparams",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "intercambiarTexto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/intercambiartexto/1/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"intercambiartexto",
+						"1",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "introducirAlumno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dni\":\"68741298H\",\r\n    \"telefono\":\"4444444\",\r\n    \"nombre\":\"alumno\",\r\n    \"apellido\":\"repetido\",\r\n    \"edad\":24,\r\n    \"sexo\":\"Otro\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/introduciralumno",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"introduciralumno"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "introducirAlumnoActualizar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dni\":\"68741298\",\r\n    \"telefono\":\"4444444\",\r\n    \"nombre\":\"alumno\",\r\n    \"apellido\":\"repetido\",\r\n    \"edad\":24,\r\n    \"sexo\":\"Otro\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/introduciractualizaralumno",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"introduciractualizaralumno"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarAlumnos",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/eliminaralumnos/23",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"eliminaralumnos",
+						"23"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarAlumnosNombre",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/eliminarnombre/M",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"eliminarnombre",
+						"M"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

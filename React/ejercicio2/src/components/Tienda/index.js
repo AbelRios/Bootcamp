@@ -1,0 +1,1 @@
+export { tienda } from "./Tienda";

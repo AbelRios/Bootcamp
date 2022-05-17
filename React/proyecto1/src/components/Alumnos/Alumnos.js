@@ -10,7 +10,7 @@ export default function Alumnos({alumnos}) { // donde alumnos va a ser un array 
 
                 // Ponemos el componente Alumno para que nos lo transforme en el ul + los li
                 // como hemos definido en el componente Alumno
-                // y usamos el nombre (que se supone que es el id) como key
+                // y usamos el nombre (que se supone que es el id) como key (key necesaria cuando hacemos map)
             }
         </>
     )

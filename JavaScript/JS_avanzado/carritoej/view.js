@@ -1,24 +1,24 @@
 import { Configuration } from "../configuration.js";
 
-/**
-   * @class View Clase padre de vistas con métodos comunes
-   *
-   */
 // class View { Versión antigua del profesor
 //   createElement(tag, class1, class2, class3) { // Intentar hacerlo con un array en lugar de las 3 clases
 //     const element = document.createElement(tag) // tag es la etiqueta (div,h1,h2... lo que sea)
 //     if (class1) {
-//       element.classList.add(class1)
-//     }
-//     if (class2) {
-//       element.classList.add(class2)
-//     }
-//     if (class3) {
-//       element.classList.add(class3)
-//     }
-//     return element
-//   }
-
+  //       element.classList.add(class1)
+  //     }
+  //     if (class2) {
+    //       element.classList.add(class2)
+    //     }
+    //     if (class3) {
+      //       element.classList.add(class3)
+      //     }
+      //     return element
+      //   }
+      
+/**
+* @class View Clase padre de vistas con métodos comunes
+*
+*/
 class View { //modificación ***
   createElement(tag, clases) {
     const element = document.createElement(tag);
@@ -105,7 +105,7 @@ export default class ViewCart extends View { // Podríamos usar un document priv
     this.DOMTotal.textContent = cart.getTotal();             //en la vista 
   }
   /**
-   * Muestra un item del carrito
+   * 
    * @param {} item: producto y cantidad
    */
   _createItem(item) {
@@ -129,7 +129,7 @@ export default class ViewCart extends View { // Podríamos usar un document priv
    * @param {} handler: método que borra un artículo. Se usa el código del artículo guardado 
    */
   bindDelete(handler) {
-    this.DOMCart.addEventListener('click', event => { // aquí añade al carrito (<ul>)
+    this.DOMCart.addEventListener('click', event => { // aquí escucha al carrito (<ul>)
       if (event.target.className.startsWith('btn')) { // si la clase del evento empieza con 'btn' entramos al if
         const id = parseInt(event.target.dataset.item)
         handler(id)

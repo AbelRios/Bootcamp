@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const arrayContacts = [
   {
@@ -7,7 +8,7 @@ const arrayContacts = [
     surname: "Hook",
     address: "Boat St.",
     city: "Neverland",
-    postalCode: "001",
+    postCode: "001",
     phoneNumber: "666111222"
   },
   {
@@ -15,15 +16,15 @@ const arrayContacts = [
     surname: "Sparrow",
     address: "Black Pearl St.",
     city: "Caribbean",
-    postalCode: "002",
+    postCode: "002",
     phoneNumber: "666333444"
   },
   {
     name: "Edward",
     surname: "Kenway",
     address: "Nassau St.",
-    city: "Cuba",
-    postalCode: "003",
+    city: "La Habana",
+    postCode: "003",
     phoneNumber: "666555666"
   }
 ]

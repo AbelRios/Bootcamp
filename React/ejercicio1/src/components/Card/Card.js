@@ -10,5 +10,4 @@ export default function Card({tarjeta}) {
           </div>
       </div>
     )
-
 }

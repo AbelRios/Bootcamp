@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "6fecf712-09be-44da-bf61-1c6312876fc3",
+		"name": "Node_SQL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20949531"
+	},
+	"item": [
+		{
+			"name": "introducirCarta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\": \"Texto Nuevo\",\r\n    \"idPersona\": 99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/nuevacarta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"nuevacarta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modificarCarta",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\": \"Texto Modificado\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/modificarcarta/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"modificarcarta",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "borrarCarta",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/borrarcarta/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"borrarcarta",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

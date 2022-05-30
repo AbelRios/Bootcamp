@@ -5,7 +5,7 @@ export default function Card({ character, list, setList }) {
     }
 
     return (
-        <div className="col mb-4">
+        <div className="col mb-5">
             <div className="card" style={{ width: '18rem' }}>
                 <img src={character.image} className="card-img-top" alt="imagen"></img>
                 <div className="card-body">
@@ -15,7 +15,10 @@ export default function Card({ character, list, setList }) {
                         <li class="list-group-item">Especie: {character.species}</li>
                         <li class="list-group-item">Estado: {character.status}</li>
                     </ul>
-                    <button className="btn btn-danger" onClick={() => handleDelete(character.id)}>Eliminar Personaje</button>
+                    <div className="row">
+                    <button className="btn btn-primary">Detalles</button>
+                    <button className="btn btn-danger mt-2" onClick={() => handleDelete(character.id)}>Eliminar Personaje</button>
+                    </div>
                 </div>
             </div>
         </div>

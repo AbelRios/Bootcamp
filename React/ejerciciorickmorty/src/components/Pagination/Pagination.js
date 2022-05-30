@@ -1,23 +1,13 @@
 export default function Pagination({ page, setPage, maxPage }) {
 
-    console.log(maxPage);
-
-    function nextPage(){
-         setPage(page+1);
-    }
-
-    function previousPage(){
-         setPage(page-1);
-    }
-
     return (
         <nav aria-label="Page navigation example">
-            <ul class="pagination">
-                <li class="page-item"><a class="page-link" onClick={()=>setPage(1)}>Primera Página</a></li>
-                <li class="page-item"><a class="page-link" onClick={previousPage}>Previous</a></li>
-                <li class="page-item"><a class="page-link">{page}</a></li>
-                <li class="page-item"><a class="page-link" onClick={nextPage}>Next</a></li>
-                <li class="page-item"><a class="page-link" onClick={()=>setPage(maxPage)}>Última Página</a></li>
+            <ul className="pagination mb-4">
+                <li className="page-item"><button className="page-link" onClick={() => setPage(1)}>Primera Página</button></li>
+                <li className="page-item"><button className="page-link"  onClick={() => page>1 ?? setPage(page - 1)}>Previous</button></li>
+                <li className="page-item"><button className="page-link">{page}</button></li>
+                <li className="page-item"><button className="page-link" onClick={() => setPage(page + 1)}>Next</button></li>
+                <li className="page-item"><button className="page-link" onClick={() => setPage(maxPage)}>Última Página</button></li>
             </ul>
         </nav>
     )

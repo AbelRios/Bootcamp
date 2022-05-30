@@ -1,0 +1,57 @@
+[
+{
+    "dni":"00984564Y",
+    "telefono":"654786907",
+    "nombre":"Adrian",
+    "apellido":"Molina",
+    "edad":21,
+    "sexo":"Masculino"
+},
+{
+    "dni":"9874521J",
+    "telefono":"645789214",
+    "nombre":"Javier",
+    "apellido":"Gutierrez",
+    "edad":23,
+    "sexo":"Masculino"
+},
+{
+    "dni":"85632149O",
+    "telefono":"632459871",
+    "nombre":"Miguel",
+    "apellido":"Torres",
+    "edad":23,
+    "sexo":"Masculino"
+},
+{
+    "dni":"68542175U",
+    "telefono":"654786907",
+    "nombre":"Omar",
+    "apellido":"Montes",
+    "edad":24,
+    "sexo":"Masculino"
+},
+ {
+    "dni":"58478962L",
+    "telefono":"685632641",
+    "nombre":"Paula",
+    "apellido":"Garcia",
+    "edad":24,
+    "sexo":"Femenino"
+},
+ {
+    "dni":"6897452U",
+    "telefono":"653214789",
+    "nombre":"Marta",
+    "apellido":"Gonzalez",
+    "edad":24,
+    "sexo":"Femenino"
+},
+{
+    "dni":"68741298H",
+    "telefono":"693654217",
+    "nombre":"Marta",
+    "apellido":"Gutierrez",
+    "edad":23,
+    "sexo":"Femenino"
+}]

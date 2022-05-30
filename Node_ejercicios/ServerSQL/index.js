@@ -73,7 +73,7 @@ app.put("/modificarcarta/:id", (request, response) => {
         `UPDATE cartas SET texto = '${request.body.text}' WHERE id = ${request.params.id}`,
         (err, rows, fields) => {
             if (err) throw err;
-            response.json(rows);
+            response.json("Modificado");
         }
     );
     desconectar();

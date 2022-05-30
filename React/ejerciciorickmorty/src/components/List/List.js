@@ -1,14 +1,27 @@
-export default function List({ list }) {
+import Card from "../Card"
+
+export default function List({ list, setList }) {
 
     if (!list) {
         return ("Cargando Lista de Personajes...")
-    } 
-
-    // Aquí escribir el código
+    }
 
     return (
-        // hacer un div que me haga un grid guapo que me ponga al menos 3 o 4 tarjetas por fila
-
+        <>
+            <div className="container">
+                <div className="row row-cols-1 row-cols-md-4 g-20">
+                    {
+                        list.map((character, index) => {
+                            return (
+                                <div key={index}>
+                                    <Card list={list} character={character} setList={setList} />
+                                </div>
+                            )
+                        }
+                        )}
+                </div>
+            </div>
+        </>
     )
-    
+
 }

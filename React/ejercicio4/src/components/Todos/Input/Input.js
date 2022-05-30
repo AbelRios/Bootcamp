@@ -12,7 +12,6 @@ export default function Input({ handleTodos }) {
     const [input, setInput] = useState(baseTodo);
 
     input.id = uuidv4();
-    input.completed = false;
 
     function handleInput(event) {
 

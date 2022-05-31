@@ -1,4 +1,5 @@
 import {useState, useEffect} from "react";
+import { DarkModeContextProvider, useDarkModeContext } from "./contexts/DarkModeContext";
 import List from "./components/List";
 import Navbar from "./components/Navbar";
 import './App.css';
@@ -39,15 +40,19 @@ function App() {
   }, [page,searchCharacter]) 
   // Aquí ponemos 'page' y otros para que realice el useEffect a cada vez que alguno sea modificado
 
+  const { darkMode } = useDarkModeContext();
+  console.log(darkMode);
   return (
+    <DarkModeContextProvider>
     <div className="App">
-      <header className="App-header">
+      <header className={darkMode ? "App-header-dark" : "App-header-light"}>
       <Navbar setSearchCharacter={setSearchCharacter}/>
         <br></br>
         <Pagination page={page} setPage={setPage} maxPage={maxPage}/>
         <List list={list} setList={setList}/>
       </header>
     </div>
+    </DarkModeContextProvider>
   );
 }
 

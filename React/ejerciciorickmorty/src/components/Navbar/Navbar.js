@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useDarkModeContext } from "../../contexts/DarkModeContext";
 
 export default function Navbar({ setSearchCharacter }) {
 
@@ -24,28 +25,29 @@ export default function Navbar({ setSearchCharacter }) {
         setSearchCharacter(search);
     }
 
-    // useEffect(function () {
-
-    //     async function fetchApi() {
-    //         const response = await fetch(`https://rickandmortyapi.com/api/character/?page=${page}&name=${searchName.name}`);
-    //         const json = await response.json();
-    //         setList(json.results); // Aquí nos quedamos sólo con la parte "results" de datos
-    //         console.log(searchName.name);
-    //         setMaxPage(json.info.pages);
-    //     }
-    //     fetchApi();
-
-    // }, [searchName])
-
+    const { darkMode, toggleDarkMode } = useDarkModeContext();
 
     return (
         <>
             <nav class="navbar navbar-light bg-dark w-100">
                 <div class="container-fluid">
-                    <a href="#" onClick={() => setSearchCharacter(baseSearch)} class="navbar-brand text-light">Ejercicio API Rick & Morty - Abel Rios</a>
+                    <a href="#" 
+                        onClick={() => setSearchCharacter(baseSearch)} 
+                        class="navbar-brand text-light"
+                        >Ejercicio API Rick & Morty - Abel Rios</a>
                     <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"/>
-                            <label class="form-check-label" for="flexSwitchCheckDefault">Dark Mode / Light Mode</label>
+                        <input 
+                            class="form-check-input" 
+                            type="checkbox" 
+                            id="flexSwitchCheckDefault"
+                            onChange={ toggleDarkMode }
+                            role="switch"
+                            value={darkMode}
+                            />
+                            <label 
+                            class="form-check-label" 
+                            for="flexSwitchCheckDefault"
+                            >Dark Mode / Light Mode</label>
                     </div>
                     <form class="d-flex" onSubmit={handleSubmit}>
                         <input class="form-control me-2"

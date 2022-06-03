@@ -1,6 +1,8 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
 app.use(express.json());
+app.use(cors());
 const mysql = require("mysql");
 
 // crear conexion a la base de datos
@@ -37,10 +39,11 @@ function desconectar() {
     });
 }
 
+conectar();
 // Haciendo un GET de la BBDD Notas, tabla Cartas
 
 app.get("/cartasidpersona/:id", (request, response) => {
-    conectar();
+    
     connection.query(
         `SELECT * FROM cartas WHERE idPersona = ${request.params.id}`,
         (err, rows, fields) => {
@@ -48,21 +51,19 @@ app.get("/cartasidpersona/:id", (request, response) => {
             response.json(rows);
         }
     );
-    desconectar();
 });
 
 // Haciendo un POST
 
 app.post("/nuevacarta", (request, response) => {
-    conectar();
+    console.log(request.body);
     connection.query(
-        `INSERT INTO cartas(texto,idPersona) VALUES ('${request.body.text}','${request.body.idPersona}')`,
+        `INSERT INTO cartas(texto,idPersona) VALUES ('${request.body.texto}','${request.body.idPersona}')`,
         (err, rows, fields) => {
             if (err) throw err;
             response.json(rows);
         }
     );
-    desconectar();
 });
 
 // Haciendo un PUT (modificando el valor texto de una carta)

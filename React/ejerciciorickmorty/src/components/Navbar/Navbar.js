@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useDarkModeContext } from "../../contexts/DarkModeContext";
 
-export default function Navbar({ setSearchCharacter }) {
+export default function Navbar({ setPage, setSearchCharacter }) {
 
     const baseSearch = {
         name: "",
@@ -23,31 +23,31 @@ export default function Navbar({ setSearchCharacter }) {
     function handleSubmit(event) {
         event.preventDefault();
         setSearchCharacter(search);
+        setPage(1);
     }
 
-    const { darkMode, toggleDarkMode } = useDarkModeContext();
+    const { toggleDarkMode } = useDarkModeContext();
 
     return (
         <>
             <nav class="navbar navbar-light bg-dark w-100">
                 <div class="container-fluid">
-                    <a href="#" 
-                        onClick={() => setSearchCharacter(baseSearch)} 
-                        class="navbar-brand text-light"
-                        >Ejercicio API Rick & Morty - Abel Rios</a>
+                <button 
+                    type="button" 
+                    className="btn btn-secondary btn-lg"
+                    onClick={() => {setSearchCharacter(baseSearch); setPage(1)}}
+                    >Home</button>
                     <div class="form-check form-switch">
                         <input 
                             class="form-check-input" 
                             type="checkbox" 
                             id="flexSwitchCheckDefault"
                             onChange={ toggleDarkMode }
-                            role="switch"
-                            value={darkMode}
                             />
                             <label 
                             class="form-check-label" 
                             for="flexSwitchCheckDefault"
-                            >Dark Mode / Light Mode</label>
+                            >Dark/Light Mode</label>
                     </div>
                     <form class="d-flex" onSubmit={handleSubmit}>
                         <input class="form-control me-2"

@@ -1,16 +1,15 @@
-import {useState, useEffect} from "react";
-import { DarkModeContextProvider, useDarkModeContext } from "./contexts/DarkModeContext";
-import List from "./components/List";
-import Navbar from "./components/Navbar";
+import { useState, useEffect } from "react";
+import { useUserLoginContext } from "./contexts/UserLoginContext";
+import Layout from "./components/Layout/";
 import './App.css';
-import Pagination from "./components/Pagination";
+import Login from "./components/Login/Login";
 
 function App() {
 
   const searchBase = {
-    name:"",
-    status:"",
-    species:""
+    name: "",
+    status: "",
+    species: ""
   }
 
   const [list, setList] = useState(null);
@@ -19,40 +18,41 @@ function App() {
   const [searchCharacter, setSearchCharacter] = useState(searchBase);
 
 
-  
+
 
   useEffect(function () {
 
-    setTimeout(function(){
+    setTimeout(function () {
 
       async function fetchApi() {
-          const response = await fetch(`https://rickandmortyapi.com/api/character/?page=${page}&name=${searchCharacter.name}&species=${searchCharacter.species}&status=${searchCharacter.status}`);
-          const json = await response.json();
-          setList(json.results); // Aquí nos quedamos sólo con la parte "results" de datos
-          setMaxPage(json.info.pages);
+        const response = await fetch(`https://rickandmortyapi.com/api/character/?page=${page}&name=${searchCharacter.name}&species=${searchCharacter.species}&status=${searchCharacter.status}`);
+        const json = await response.json();
+        setList(json.results); // Aquí nos quedamos sólo con la parte "results" de datos
+        setMaxPage(json.info.pages);
       }
       fetchApi();
 
-    },1000)
-    
+    }, 1000)
+
     return setList([]); // Aquí estamos haciendo la limpieza del evento/efecto
 
-  }, [page,searchCharacter]) 
+  }, [page, searchCharacter])
   // Aquí ponemos 'page' y otros para que realice el useEffect a cada vez que alguno sea modificado
 
-  const { darkMode } = useDarkModeContext();
-  console.log(darkMode);
+  const { user } = useUserLoginContext();
+
   return (
-    <DarkModeContextProvider>
-    <div className="App">
-      <header className={darkMode ? "App-header-dark" : "App-header-light"}>
-      <Navbar setSearchCharacter={setSearchCharacter}/>
-        <br></br>
-        <Pagination page={page} setPage={setPage} maxPage={maxPage}/>
-        <List list={list} setList={setList}/>
-      </header>
-    </div>
-    </DarkModeContextProvider>
+      <>
+      {user ? 
+        <Layout
+          setList={setList}
+          list={list}
+          setPage={setPage}
+          page={page}
+          maxPage={maxPage}
+          setSearchCharacter={setSearchCharacter}
+        /> : <Login></Login>}
+      </>
   );
 }
 

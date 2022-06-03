@@ -1,4 +1,5 @@
 import './App.css';
+import FormMongo from './components/FormMongo';
 import Formulario from './components/Formulario';
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Formulario/>
+        <FormMongo/>
       </header>
     </div>
   );

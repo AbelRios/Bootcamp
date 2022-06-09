@@ -1,5 +1,5 @@
 const express = require("express");
-const { ObjectID } = require("mongodb");
+const { ObjectId } = require("mongodb");
 const cors = require("cors");
 const app = express();
 app.use(express.json());
@@ -19,7 +19,7 @@ MongoClient.connect("mongodb://localhost:27017/", (err, client) => {
 
 //Traer todas las personas
 app.get("/personas", async function (request, response) {
-    let database = db.db("personas");
+    let database = db.db("basedeprueba");
     await database
       .collection("personas")
       .find()
@@ -79,7 +79,7 @@ app.put("/modificarnombrepersona/id/:id", async function (request, response){
     let database = db.db("basedeprueba");
     
     await database.collection("personas").updateOne(
-        {_id:ObjectID(request.params.id)},
+        {_id:ObjectId(request.params.id)},
         {$set: {nombre: request.body.nombre}}
     );
     
@@ -94,7 +94,7 @@ app.put("/modificarnamepersona", async function (request, response){
     let database = db.db("basedeprueba");
     
     await database.collection("personas").updateOne(
-        {_id: ObjectID(request.body.id)},
+        {_id: ObjectId(request.body.id)},
         {$set: {nombre: request.body.nombre}}
     );
     
@@ -110,7 +110,7 @@ app.delete("/eliminarpersona", async function (request, response){
     let database = db.db("basedeprueba");
     
     await database.collection("personas").deleteOne(
-        {_id: ObjectID(request.body.id)}
+        {_id: ObjectId(request.body.id)}
         );
     
     response.json("Dato eliminado de la Base de Datos");

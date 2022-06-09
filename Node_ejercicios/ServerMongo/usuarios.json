@@ -1,0 +1,26 @@
+[
+    {
+        "nombre": "Javier",
+        "password": "Ramirez",
+        "email": "javier@mail.com",
+        "rol": "admin"
+    },
+    {
+        "nombre": "Andrea",
+        "password": "Ortiz",
+        "email":"andrea@mail.com",
+        "rol": "user"
+    },
+    {
+        "nombre": "Luis",
+        "password": "Benitez",
+        "email":"luis@mail.com",
+        "rol": "user"
+    },
+    {
+        "nombre": "Cristina",
+        "password": "Martinez",
+        "email":"cristina@mail.com",
+        "rol": "user"
+    }
+]

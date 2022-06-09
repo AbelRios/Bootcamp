@@ -17,6 +17,19 @@ MongoClient.connect("mongodb://localhost:27017/", (err, client) => {
 });
 
 
+//Traer todas las personas
+app.get("/personas", async function (request, response) {
+    let database = db.db("personas");
+    await database
+      .collection("personas")
+      .find()
+      .toArray((err, results) => {
+        if (err) throw err;
+        response.json(results);
+      }); // Para traer todos los datos
+  });
+
+
 // Haciendo un GET de menores de la edad que nos llegue por params
 
 app.get("/menoresde/edad/:edad", async function (request, response){
@@ -35,12 +48,11 @@ app.get("/menoresde/edad/:edad", async function (request, response){
 
 // Haciendo un GET del nombre que nos llegue por params
 
-app.get("/menoresde/nombre/:nombre", async function (request, response){
+app.get("/nombre/:nombre", async function (request, response){
 
     let database = db.db("basedeprueba");
     
     await database.collection("personas").find({ nombre: { $eq: request.params.nombre } }) 
-    // Hacemos el Number() porque lo que nos llega por params es un string
     .toArray((err, results) => {
       if (err) throw err;
       response.json(results);

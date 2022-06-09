@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "6ecb73c5-f993-4c98-bcf7-5bd0e9073a94",
+		"name": "Node_MongoDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20949531"
+	},
+	"item": [
+		{
+			"name": "introducirPersona",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Ramon\",\r\n    \"apellido\": \"Garcia\",\r\n    \"edad\": 64\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/nuevapersona",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"nuevapersona"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modificarPersona",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Jaimito\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/modificarnombrepersona/id/6290ef4b598301d6e5d39faf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"modificarnombrepersona",
+						"id",
+						"6290ef4b598301d6e5d39faf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modificarPersona2",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"6290ef4b598301d6e5d39faf\",\r\n    \"nombre\": \"Amparo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/modificarnamepersona",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"modificarnamepersona"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarPersona",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"6290ef4b598301d6e5d39faf\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/eliminarpersona",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"eliminarpersona"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "introducirAlumno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dni\":\"654786907\",\r\n    \"telefono\": \"222333444\",\r\n    \"nombre\": \"nuevoAlumno\",\r\n    \"apellido\": \"nuevoApellido\",\r\n    \"edad\": 30,\r\n    \"sexo\": \"Masculino\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/introduciralumno",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"introduciralumno"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

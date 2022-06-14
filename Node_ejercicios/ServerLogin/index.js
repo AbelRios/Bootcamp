@@ -1,6 +1,6 @@
 const { response } = require('express');
 const express = require('express');
-const { ObjectID } = require("mongodb");
+const { ObjectId } = require("mongodb");
 const md5 = require("nodejs-md5");
 const jwt = require('jsonwebtoken');
 const app = express();
@@ -111,7 +111,7 @@ app.post("/logintoken", async function (request, response){
                     response.status(404).send("Usuario no existe");
                 } else {
                     if(request.body.password === result.password){
-                        const accessToken = jwt.sign({ idObject: result.ObjectID, email:result.email}, "releevant", {expiresIn: 60});
+                        const accessToken = jwt.sign({ idObject: result._id, email:result.email}, "releevant", {expiresIn: 60});
                         response.status(200).send(accessToken);
                     } else {
                         response.status(401).send("Password no valida.")
@@ -130,7 +130,7 @@ app.get("/me", (request, response) => {
         if(err){
             response.status(401).send("Token expirado");
         } else {
-            response.json(decoded.email);
+            response.json(decoded.idObject, decoded.email);
         }
     });
 })

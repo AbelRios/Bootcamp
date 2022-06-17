@@ -111,7 +111,7 @@ app.post("/logintoken", async function (request, response){
                     response.status(404).send("Usuario no existe");
                 } else {
                     if(request.body.password === result.password){
-                        const accessToken = jwt.sign({ idObject: result._id, email:result.email}, "releevant", {expiresIn: 60});
+                        const accessToken = jwt.sign({ id: result._id, email:result.email}, "releevant", {expiresIn: 120});
                         response.status(200).send(accessToken);
                     } else {
                         response.status(401).send("Password no valida.")
@@ -130,7 +130,7 @@ app.get("/me", (request, response) => {
         if(err){
             response.status(401).send("Token expirado");
         } else {
-            response.json(decoded.idObject, decoded.email);
+            response.json({email:decoded.email, id:decoded.id});
         }
     });
 })

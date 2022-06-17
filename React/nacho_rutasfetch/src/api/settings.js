@@ -1,0 +1,15 @@
+const BASE_URL = "http://localhost:3001/";
+const GET_ALL_PEOPLE = `${BASE_URL}personas/`;
+const GET_SINGLE_PERSON = `${BASE_URL}persona/<ID>`;
+const DELETE_SINGLE_PERSON = `${GET_ALL_PEOPLE}delete/<NAME>`;
+const UPDATE_PERSON = `${GET_ALL_PEOPLE}put`;
+const CREATE_PERSON = `${GET_ALL_PEOPLE}post`;
+
+export {
+  BASE_URL,
+  GET_ALL_PEOPLE,
+  GET_SINGLE_PERSON,
+  DELETE_SINGLE_PERSON,
+  UPDATE_PERSON,
+  CREATE_PERSON,
+};
